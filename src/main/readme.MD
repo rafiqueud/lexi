@@ -22,3 +22,9 @@ I focused in these initial solution to make a O(N) implementation, just to itera
 Tried to use must pure Java implementation to allows non blocking IO and do not block the vert.x event-loop because I don't know if its allowed to use external librarys.
 
 Put just JUniter dependencies to create some simple tests.
+
+## Running
+
+```
+mvn org.codehaus.mojo:exec-maven-plugin:exec -Dexec.executable=java -Dexec.args="-cp %classpath io.vertx.core.Launcher run test.Server"
+```
